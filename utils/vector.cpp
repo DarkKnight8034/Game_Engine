@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 #include <cmath>
 
 class Vector
@@ -37,14 +38,8 @@ public:
     }
 };
 
-std::ostream& operator<<(std::ostream& stream, Vector v)
+std::ostream& operator<<(std::ostream& stream,const Vector& v)
 {
     stream << "(" << v.x << ", " << v.y << ")";
     return stream;
-}
-
-int main()
-{
-    Vector v = Vector(1, 1);
-    std::cout << v;
 }
