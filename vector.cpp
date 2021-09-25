@@ -15,6 +15,11 @@ public:
         return sqrtf(powf(x, 2) + powf(y, 2));
     }
 
+    float dot(const Vector& other) const
+    {
+        return x  * other.x + y * other.y;
+    }
+
     // Custom operations
     Vector operator*(const int& scalar) const
     {
